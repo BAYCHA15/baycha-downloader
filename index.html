@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAYCHA - Media Downloader & AI Translator Dubber | BAYCHA DEVTEAM</title>
+  <meta name="description" content="Unlock seamless media downloading and AI translation & dubbing with BAYCHA suite. Powerful, budget-friendly software for creators.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="File/BAYCHA.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" title="BAYCHA DEVTEAM Home">
+        <div class="logo-badge">
+          <img src="File/BAYCHA.png" alt="BAYCHA Monogram Logo" class="brand-img-logo">
+          <span class="logo-text">BAYCHA</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+          
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Software Products <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#hero" onclick="switchProductShowcase('downloader')">BAYCHA Media Downloader</a></li>
+              <li><a href="#hero" onclick="switchProductShowcase('dubber')">BAYCHA AI Translator & Dubber</a></li>
+              <li><a href="#pricing" onclick="openPricingModal()">Pricing Plans</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown active">
+            <a href="#snapkee" class="nav-link dropdown-toggle">BAYCHA <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#features">Core Features</a></li>
+              <li><a href="#platforms">Supported Platforms</a></li>
+              <li><a href="#how-to-use">How to Use</a></li>
+              <li><a href="#pricing" onclick="openPricingModal()">Buy License</a></li>
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">More <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#how-to-use">Tutorial Videos</a></li>
+              <li><a href="https://t.me/+ozTHjFdsfi5lMGM1" target="_blank" rel="noopener">Telegram Channel</a></li>
+              <li><a href="https://t.me/BAYCHATOOLS" target="_blank" rel="noopener">Telegram Support Group</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="https://t.me/BAYCHATOOLS" target="_blank" rel="noopener" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-btn" id="searchTriggerBtn" title="Search site" aria-label="Search site">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    
+    <!-- Hero Section (Software UI Interactive Showcase & Main Banner) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Product Switcher Bar -->
+        <div class="product-showcase-tabs">
+          <button class="prod-tab-btn active" id="btnShowDownloader" onclick="switchProductShowcase('downloader')">
+            <i class="fa-solid fa-cloud-arrow-down"></i> Baycha · Social Media Downloader
+          </button>
+          <button class="prod-tab-btn" id="btnShowDubber" onclick="switchProductShowcase('dubber')">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> BAYCHA-AI Translator & Dubber V1.0.0
+          </button>
+        </div>
+
+        <!-- 1. Authentic Desktop Software UI Window Frame (Baycha · Social Media Downloader) -->
+        <div class="baycha-window-frame" id="showcaseDownloader">
+          
+          <!-- Window Titlebar -->
+          <div class="baycha-window-titlebar">
+            <div class="baycha-title-left">
+              <img src="File/BAYCHA.png" alt="BC Logo" class="baycha-title-icon">
+              <span class="baycha-title-text">Baycha · Social Media Downloader</span>
+            </div>
+            
+            <div class="baycha-window-controls">
+              <span class="baycha-win-btn minimize"><i class="fa-solid fa-minus"></i></span>
+              <span class="baycha-win-btn maximize"><i class="fa-regular fa-square"></i></span>
+              <span class="baycha-win-btn close"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+          </div>
+
+          <!-- Software Window Main Body -->
+          <div class="baycha-window-body">
+            
+            <!-- Left Sidebar Navigation -->
+            <aside class="baycha-sidebar">
+              <div class="baycha-sidebar-logo">
+                <img src="File/BAYCHA.png" alt="BAYCHA Monogram" class="baycha-logo-img">
+                <div class="baycha-logo-text-wrap">
+                  <span class="baycha-brand-title">BAYCHA</span>
+                  <span class="baycha-brand-sub">MEDIA DOWNLOADER</span>
+                </div>
+              </div>
+
+              <ul class="baycha-nav-menu">
+                <li class="baycha-nav-link" data-platform="pinterest">
+                  <img src="File/pinterest.png" alt="Pinterest" class="menu-icon">
+                  <span>Pinterest Image</span>
+                </li>
+                <li class="baycha-nav-link active" data-platform="instagram">
+                  <img src="File/instagram.png" alt="Instagram" class="menu-icon">
+                  <span>Instagram Video</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="youtube">
+                  <img src="File/youtube.png" alt="YouTube" class="menu-icon">
+                  <span>YouTube</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="tiktok">
+                  <img src="File/tiktok.png" alt="TikTok" class="menu-icon">
+                  <span>TikTok</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="facebook">
+                  <img src="File/facebook.png" alt="Facebook" class="menu-icon">
+                  <span>Facebook</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="rednote">
+                  <img src="File/rednote.webp" alt="Rednote" class="menu-icon">
+                  <span>Rednote</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="xiaohongshu">
+                  <img src="File/xiaohongshu.png" alt="Xiaohongshu" class="menu-icon">
+                  <span>Xiaohongshu</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="kwai">
+                  <img src="File/kwai.webp" alt="Kwai" class="menu-icon">
+                  <span>Kwai</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="snackvideo">
+                  <img src="File/snackvideo.png" alt="SnackVideo" class="menu-icon">
+                  <span>SnackVideo</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="reelshort">
+                  <img src="File/reelshort.png" alt="ReelShort" class="menu-icon">
+                  <span>Drama ReelShort</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="shorttv">
+                  <img src="File/ShortTV.png" alt="ShortTV" class="menu-icon">
+                  <span>Drama ShortTV</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="settings">
+                  <img src="File/Settings.png" alt="Settings" class="menu-icon">
+                  <span>Settings</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="license">
+                  <i class="fa-solid fa-paper-plane menu-icon-fa text-blue"></i>
+                  <span>License · Support</span>
+                </li>
+                <li class="baycha-nav-link" data-platform="logs">
+                  <img src="File/Logs.png" alt="Logs" class="menu-icon">
+                  <span>Logs</span>
+                </li>
+              </ul>
+
+              <div class="baycha-sidebar-footer">
+                <button class="theme-toggle-btn" id="darkThemeToggleBtn">
+                  <i class="fa-solid fa-moon"></i> Dark Mode
+                </button>
+                <div class="licensed-indicator">
+                  <span class="green-dot">●</span> Licensed
+                </div>
+              </div>
+            </aside>
+
+            <!-- Main Workspace Workspace (Right Content Area) -->
+            <div class="baycha-workspace">
+              
+              <!-- Platform Header -->
+              <div class="baycha-workspace-header">
+                <h2 id="appPlatformTitle">Download Instagram Videos</h2>
+                <p id="appPlatformSubtitle">Download videos & reels from profiles</p>
+              </div>
+
+              <!-- Green Active License Banner -->
+              <div class="baycha-license-banner">
+                <i class="fa-solid fa-circle-check banner-check-icon"></i>
+                <span class="license-banner-text">
+                  <strong>License Active</strong> — BAYCHA · 2026-07-28 · 0 days left
+                </span>
+              </div>
+
+              <!-- URL Input & Add Queue Card -->
+              <div class="baycha-card url-card">
+                <label class="card-section-label">ADD PROFILE / POST URL</label>
+                <div class="url-input-action-row">
+                  <input type="text" id="baychaUrlInput" placeholder="@Username · profile URL · /reel/ link" value="https://www.instagram.com/reel/baycha_demo_video/">
+                  <button class="baycha-btn-green" id="baychaAddQueueBtn"><i class="fa-solid fa-plus"></i> Add to Queue</button>
+                </div>
+
+                <div class="url-options-row">
+                  <div class="option-field">
+                    <label>Max Items :</label>
+                    <input type="number" id="maxItemsInput" value="200" min="1" max="5000">
+                  </div>
+
+                  <div class="option-checkbox">
+                    <label><input type="checkbox" id="onlyImageCheckbox"> Download only image</label>
+                  </div>
+
+                  <div class="option-path-info">
+                    <span>Items save to: <strong id="saveFolderText">Instagram / username</strong> · uses Instagram Image cookie</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Queue Box -->
+              <div class="baycha-card queue-card">
+                <div class="queue-header-row">
+                  <label class="card-section-label">QUEUE</label>
+                </div>
+                
+                <div class="queue-display-box" id="baychaQueueBox">
+                  <div class="queue-item-row" id="sampleQueueItem">
+                    <div class="queue-item-left">
+                      <span class="queue-item-badge">IG REEL</span>
+                      <span class="queue-item-title">https://www.instagram.com/reel/baycha_demo_video/</span>
+                    </div>
+                    <span class="queue-item-status ready">Ready to download</span>
+                  </div>
+                </div>
+
+                <div class="queue-actions-footer">
+                  <div class="queue-left-btns">
+                    <button class="baycha-btn-gray" id="removeSelectedBtn">Remove Selected</button>
+                    <button class="baycha-btn-gray" id="clearAllQueueBtn">Clear All</button>
+                  </div>
+                  <span class="queue-count-text" id="queueCountText">1 items</span>
+                </div>
+              </div>
+
+              <!-- Controls & Stats Section -->
+              <div class="baycha-card controls-card">
+                <label class="card-section-label">CONTROLS</label>
+                <div class="controls-status-line">
+                  <span class="status-title" id="controlStatusText">Ready</span>
+                </div>
+
+                <div class="controls-progress-bar">
+                  <div class="controls-progress-fill" id="baychaProgressFill"></div>
+                </div>
+
+                <!-- 4 Stat Boxes -->
+                <div class="stat-boxes-grid">
+                  <div class="stat-box">
+                    <span class="stat-label">SUCCESS</span>
+                    <span class="stat-val blue" id="statSuccess">0 items</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-label">DOWNLOADED</span>
+                    <span class="stat-val green" id="statDownloaded">0</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-label">FAILED</span>
+                    <span class="stat-val red" id="statFailed">0</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-label">CURRENT</span>
+                    <span class="stat-val purple" id="statCurrent">—</span>
+                  </div>
+                </div>
+
+                <!-- Main Action Buttons -->
+                <div class="controls-actions-row">
+                  <button class="baycha-btn-main-green" id="baychaStartBtn">
+                    <i class="fa-solid fa-cloud-arrow-down"></i> Start Download
+                  </button>
+                  <button class="baycha-btn-stop" id="baychaStopBtn">
+                    <i class="fa-solid fa-square"></i> Stop
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Window Footer License Info Bar -->
+          <div class="baycha-window-footer">
+            <span class="footer-license-path">
+              License: Active · 2026-07-28
+            </span>
+          </div>
+        </div>
+
+        <!-- 2. NEW Software UI Showcase (BAYCHA-AI Translator&Dubber V1.0.0) -->
+        <div class="baycha-window-frame dubber-frame hidden-showcase" id="showcaseDubber">
+          
+          <!-- Window Titlebar -->
+          <div class="baycha-window-titlebar">
+            <div class="baycha-title-left">
+              <img src="File/BAYCHA.png" alt="BC Logo" class="baycha-title-icon">
+              <span class="baycha-title-text">BAYCHA-AI Translator&Dubber V1.0.0</span>
+            </div>
+            
+            <div class="baycha-window-controls">
+              <span class="baycha-win-btn minimize"><i class="fa-solid fa-minus"></i></span>
+              <span class="baycha-win-btn maximize"><i class="fa-regular fa-square"></i></span>
+              <span class="baycha-win-btn close"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+          </div>
+
+          <!-- Top Dubber Mode Tabs Bar -->
+          <div class="dubber-mode-tabs-bar">
+            <button class="dub-mode-tab active" data-mode="single">
+              <i class="fa-solid fa-video"></i> Single Dubbing (បកប្រែតែមួយ)
+            </button>
+            <button class="dub-mode-tab" data-mode="batch">
+              <i class="fa-solid fa-layer-group"></i> Batch Dubbing (បកប្រែច្រើនភាគ)
+            </button>
+            <button class="dub-mode-tab" data-mode="merger">
+              <i class="fa-solid fa-wand-magic"></i> Video Merger (បញ្ចួលតភាគ)
+            </button>
+          </div>
+
+          <!-- Dubber Action Toolbar Buttons -->
+          <div class="dubber-action-toolbar">
+            <button class="dub-action-btn green"><i class="fa-solid fa-right-to-bracket"></i> Import Video</button>
+            <button class="dub-action-btn green"><i class="fa-solid fa-file-lines"></i> Import Subtitle</button>
+            <button class="dub-action-btn green"><i class="fa-solid fa-circle-question"></i> Auto Transcribe</button>
+            <button class="dub-action-btn green"><i class="fa-solid fa-language"></i> Translate Text</button>
+            <button class="dub-action-btn green"><i class="fa-solid fa-microphone-lines"></i> Generate TTS</button>
+            <button class="dub-action-btn green"><i class="fa-solid fa-film"></i> Render Video</button>
+            <button class="dub-action-btn green highlight" id="btnDubberStartAll"><i class="fa-solid fa-arrows-rotate"></i> Start All</button>
+            <button class="dub-action-btn green"><i class="fa-solid fa-file-code"></i> Workflow SRT</button>
+            <button class="dub-action-btn green"><i class="fa-solid fa-gear"></i> Settings</button>
+            <button class="dub-action-btn red"><i class="fa-solid fa-circle-xmark"></i> Cancel</button>
+          </div>
+
+          <!-- Main Workspace (Grid 2 Columns: Table + Video Player) -->
+          <div class="dubber-workspace-grid">
+            
+            <!-- Left Column: Translation & Dubbing Table -->
+            <div class="dubber-table-col">
+              <div class="dubber-table-wrapper">
+                <table class="dubber-activities-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 45px;">ID</th>
+                      <th style="width: 100px;">Time</th>
+                      <th>Original Text</th>
+                      <th>Translated Text</th>
+                      <th style="width: 90px;">Status</th>
+                      <th style="width: 140px;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td class="time-code">00:00:00,00...</td>
+                      <td>You're gay, I don't care. You c...</td>
+                      <td class="km-text">ដងថាធ្វើលើកដំបូង ក៏ខ្ញុំមិនខ្វល់ដែរ...</td>
+                      <td><span class="status-pill synthesized">Synthesized</span></td>
+                      <td>
+                        <button class="table-action-gen"><i class="fa-solid fa-microphone"></i> Generate Voic</button>
+                        <button class="table-action-del"><i class="fa-solid fa-trash-can"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td class="time-code">00:00:05,00...</td>
+                      <td>But if you lay your hands on ...</td>
+                      <td class="km-text">តែបើហ៊ានលូកដៃប៉ះពាល់ប្រុសគ្រួសារ...</td>
+                      <td><span class="status-pill synthesized">Synthesized</span></td>
+                      <td>
+                        <button class="table-action-gen"><i class="fa-solid fa-microphone"></i> Generate Voic</button>
+                        <button class="table-action-del"><i class="fa-solid fa-trash-can"></i></button>
+                      </td>
+                    </tr>
+                    <tr class="active-dubbing-row">
+                      <td>3</td>
+                      <td class="time-code">00:00:12,00...</td>
+                      <td>That's not a problem for me. M...</td>
+                      <td class="km-text">រឿងប៉ុណ្ណឹងគ្មានបញ្ហាសម្រាប់ខ្ញុំទេ! ...</td>
+                      <td><span class="status-pill synthesized">Synthesized</span></td>
+                      <td>
+                        <button class="table-action-gen"><i class="fa-solid fa-microphone"></i> Generate Voic</button>
+                        <button class="table-action-del"><i class="fa-solid fa-trash-can"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td class="time-code">00:00:15,00...</td>
+                      <td>If your family is so powerful, w...</td>
+                      <td class="km-text">បើគ្រួសារនាងមានអំណាចខ្លាំងក្លាដូច...</td>
+                      <td><span class="status-pill synthesized">Synthesized</span></td>
+                      <td>
+                        <button class="table-action-gen"><i class="fa-solid fa-microphone"></i> Generate Voic</button>
+                        <button class="table-action-del"><i class="fa-solid fa-trash-can"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td class="time-code">00:00:19,00...</td>
+                      <td>What's the point of coming after...</td>
+                      <td class="km-text">មកតាមរកខ្ញុំធ្វើអ្វី? វាគ្មាន...</td>
+                      <td><span class="status-pill synthesized">Synthesized</span></td>
+                      <td>
+                        <button class="table-action-gen"><i class="fa-solid fa-microphone"></i> Generate Voic</button>
+                        <button class="table-action-del"><i class="fa-solid fa-trash-can"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td class="time-code">00:00:23,00...</td>
+                      <td>If you conquer him, wouldn't th...</td>
+                      <td class="km-text">យើងអាចបង្រ្កាបវាបាន មិនបាច់កែ...</td>
+                      <td><span class="status-pill synthesized">Synthesized</span></td>
+                      <td>
+                        <button class="table-action-gen"><i class="fa-solid fa-microphone"></i> Generate Voic</button>
+                        <button class="table-action-del"><i class="fa-solid fa-trash-can"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td class="time-code">00:00:27,00...</td>
+                      <td>Derek is a tough fighter, so he's...</td>
+                      <td class="km-text">អា ខេវិន ហ្នឹងជាជើងខ្លាំង ...</td>
+                      <td><span class="status-pill synthesized">Synthesized</span></td>
+                      <td>
+                        <button class="table-action-gen"><i class="fa-solid fa-microphone"></i> Generate Voic</button>
+                        <button class="table-action-del"><i class="fa-solid fa-trash-can"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td class="time-code">00:00:32,00...</td>
+                      <td>So you're saying I'm easy to d...</td>
+                      <td class="km-text">ចុះឯងចង់មានន័យថា ខ្ញុំស្រួល...</td>
+                      <td><span class="status-pill synthesized">Synthesized</span></td>
+                      <td>
+                        <button class="table-action-gen"><i class="fa-solid fa-microphone"></i> Generate Voic</button>
+                        <button class="table-action-del"><i class="fa-solid fa-trash-can"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Right Column: Video Preview Player Panel -->
+            <div class="dubber-player-col">
+              <div class="video-player-frame">
+                <div class="video-display-area">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Video Dubbing Preview" class="dubber-video-img">
+                  <div class="video-subtitle-overlay">That's fine.</div>
+                  <div class="watermark-tag">R</div>
+                </div>
+
+                <div class="player-controls-bar">
+                  <button class="player-btn" id="btnDubPlay"><i class="fa-solid fa-play"></i></button>
+                  <button class="player-btn"><i class="fa-solid fa-pause"></i></button>
+                  <button class="player-btn"><i class="fa-solid fa-volume-high"></i></button>
+                  
+                  <div class="player-seekbar">
+                    <div class="seekbar-fill" style="width: 25%;"></div>
+                  </div>
+
+                  <span class="player-time-code">00:00:04 / 00:01:37</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Section Tag -->
+        <div class="hero-tagline">
+          <h2>Scraper <span class="dot">☉</span> Downloader <span class="dot">☉</span> AI Dubber</h2>
+          <a href="#intro-banner" class="scroll-down-btn" aria-label="Scroll to introductory banner">
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Secondary Hero Intro Banner -->
+    <section class="intro-banner-section" id="intro-banner">
+      <div class="section-container">
+        <h1 class="intro-title">Effortless Bulk Media Downloading & AI Dubbing at an Affordable Price</h1>
+        <p class="intro-subtitle">
+          Unlock seamless media downloading, AI translation, text-to-speech dubbing, and video conversion with BAYCHA powerful yet budget-friendly software suite. Speed, efficiency, and reliability—all at an unbeatable price.
+        </p>
+
+        <div class="hero-cta-buttons">
+          <button class="cta-btn buy-btn" onclick="openPricingModal()">
+            <i class="fa-solid fa-cart-shopping"></i> Buy License
+          </button>
+          <a href="https://t.me/BAYCHATOOLS" target="_blank" rel="noopener" class="cta-btn contact-btn">
+            <i class="fa-solid fa-circle-info"></i> Contact Support
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-container">
+        <h2 class="section-title">Core Features</h2>
+
+        <div class="features-grid">
+          
+          <!-- Feature Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper blue-icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3 class="feature-card-title">The Fastest Scraper, Downloader & Converter</h3>
+            <ul class="feature-list">
+              <li>Quickly extracts media or data from websites.</li>
+              <li>Saves files fast with resume and batch support.</li>
+              <li>Converts files to any format for easy use.</li>
+              <li>Automates the entire process in one tool.</li>
+              <li>Saves time, boosts productivity, and ensures flexibility.</li>
+            </ul>
+          </div>
+
+          <!-- Feature Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper ai-icon">
+              <div class="ai-badge-text">AI ✨</div>
+            </div>
+            <h3 class="feature-card-title">SMART Caption Engine, AI Support & Translation ✨</h3>
+            <ul class="feature-list">
+              <li>Generates accurate, real-time captions & Khmer dubbing.</li>
+              <li>AI Support: Auto transcribe, translate & synthetic TTS voice.</li>
+              <li>Instantly translates captions into English & Khmer.</li>
+              <li>Improves content reach for diverse and global audiences.</li>
+              <li>Saves time with minimal manual editing or input.</li>
+            </ul>
+          </div>
+
+          <!-- Feature Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper cpu-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="feature-card-title">GPU Acceleration & Thread Control</h3>
+            <ul class="feature-list">
+              <li>Speeds up processing using powerful graphics hardware.</li>
+              <li>Thread Control: Optimizes multitasking with custom thread management.</li>
+              <li>Balances CPU and GPU load for best performance.</li>
+              <li>Reduces time for downloads, conversions, and rendering.</li>
+              <li>Adapts to system specs for maximum efficiency.</li>
+            </ul>
+          </div>
+
+          <!-- Feature Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper speed-icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <h3 class="feature-card-title">Real Time Progression & Status Update</h3>
+            <ul class="feature-list">
+              <li>Monitor tasks as they happen, step by step.</li>
+              <li>Get real-time notifications on progress and changes.</li>
+              <li>Visual indicators for clarity and control.</li>
+              <li>Immediate feedback on failures or issues.</li>
+              <li>Keeps users informed without delays or confusion.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Supported Platforms Section -->
+    <section class="platforms-section" id="platforms">
+      <div class="section-container">
+        <h2 class="section-title text-light">Supported Platforms</h2>
+        <p class="section-subtitle-center">
+          Seamlessly extract, scrape, and download high resolution videos, photos, shorts & drama series across popular social networks and short video platforms.
+        </p>
+
+        <!-- Category 1: Social Network Sites -->
+        <div class="platform-category-block">
+          <div class="category-header">
+            <i class="fa-solid fa-share-nodes category-icon"></i>
+            <h3>Social Network Sites</h3>
+          </div>
+
+          <div class="platform-cards-grid">
+            
+            <!-- Facebook -->
+            <div class="platform-card">
+              <div class="platform-card-icon fb-bg">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>Facebook</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">Videos</span>
+                  <span class="p-tag">Reels</span>
+                  <span class="p-tag">Photos</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instagram -->
+            <div class="platform-card">
+              <div class="platform-card-icon ig-bg">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>Instagram</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">Reels</span>
+                  <span class="p-tag">Photos</span>
+                  <span class="p-tag">Profiles</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pinterest -->
+            <div class="platform-card">
+              <div class="platform-card-icon pin-bg">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>Pinterest</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">Profile</span>
+                  <span class="p-tag">Search</span>
+                  <span class="p-tag">Related</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- YouTube -->
+            <div class="platform-card">
+              <div class="platform-card-icon yt-bg">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>YouTube</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">Videos</span>
+                  <span class="p-tag">Shorts</span>
+                  <span class="p-tag">Playlists</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- TikTok -->
+            <div class="platform-card">
+              <div class="platform-card-icon tt-bg">
+                <i class="fa-brands fa-tiktok"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>TikTok</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">No Watermark</span>
+                  <span class="p-tag">HD Feeds</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kwai -->
+            <div class="platform-card">
+              <div class="platform-card-icon kw-bg">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>Kwai</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">High-Speed</span>
+                  <span class="p-tag">Clips</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SnackVideo -->
+            <div class="platform-card">
+              <div class="platform-card-icon sv-bg">
+                <i class="fa-solid fa-clapperboard"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>SnackVideo</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">Creator Feeds</span>
+                  <span class="p-tag">HD Video</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Xiaohongshu (Rednote) -->
+            <div class="platform-card">
+              <div class="platform-card-icon red-bg">
+                <i class="fa-solid fa-book-bookmark"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>Xiaohongshu (Rednote)</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">Notes</span>
+                  <span class="p-tag">Photos</span>
+                  <span class="p-tag">Videos</span>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Extension Scraper -->
+            <div class="platform-card highlight-ext">
+              <div class="platform-card-icon ext-bg">
+                <i class="fa-solid fa-puzzle-piece"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>Chrome Extension Scraper</h4>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag gold">Custom Scraped Links</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Category 2: Drama Sites -->
+        <div class="platform-category-block" style="margin-top: 40px;">
+          <div class="category-header">
+            <i class="fa-solid fa-film category-icon gold"></i>
+            <h3>Drama Sites</h3>
+          </div>
+
+          <div class="platform-cards-grid drama-grid">
+            
+            <!-- ReelShort -->
+            <div class="platform-card drama-card">
+              <div class="platform-card-icon reelshort-bg">
+                <i class="fa-solid fa-circle-play"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>ReelShort</h4>
+                <p class="platform-url-link"><a href="https://www.ReelShort.com" target="_blank" rel="noopener">www.ReelShort.com</a></p>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">Full Drama Series</span>
+                  <span class="p-tag">Episode Playlists</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ShortTV -->
+            <div class="platform-card drama-card">
+              <div class="platform-card-icon shorttv-bg">
+                <i class="fa-solid fa-tv"></i>
+              </div>
+              <div class="platform-card-info">
+                <h4>ShortTV</h4>
+                <p class="platform-url-link"><a href="https://www.ShortTV.com" target="_blank" rel="noopener">www.ShortTV.com</a></p>
+                <div class="platform-tags-wrap">
+                  <span class="p-tag">HD Drama Episodes</span>
+                  <span class="p-tag">Auto Scraping</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- How to use BAYCHA Section -->
+    <section class="tutorials-section" id="how-to-use">
+      <div class="section-container">
+        <h2 class="section-title text-light">How to use BAYCHA</h2>
+
+        <div class="video-tutorials-grid">
+          
+          <!-- Video Card 1 -->
+          <div class="video-card">
+            <div class="video-thumbnail-container" onclick="openLocalVideoModal('video/01.របៀបតម្លើង Tools  Baycha · Social Media Downloader និងប្រើប្រាស់ Tools.mp4')">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="How to install BAYCHA tutorial thumbnail" class="video-thumb-img">
+              <div class="video-overlay">
+                <span class="video-channel-tag"><i class="fa-solid fa-user"></i> BAYCHA Development Team</span>
+                <div class="play-button-circle">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="video-title-overlay">01. របៀបតម្លើង Tools Baycha · Social Media Downloader និងប្រើប្រាស់ Tools</div>
+                <span class="youtube-tag" style="background-color: #0288d1; color: #ffffff;"><i class="fa-solid fa-circle-play"></i> Watch Official Tutorial Video</span>
+              </div>
+            </div>
+            <div class="video-caption">
+              <h3>01. របៀបតម្លើង Tools Baycha · Social Media Downloader និងប្រើប្រាស់ Tools</h3>
+              <p>Step-by-step video guide on how to install, extract, and use Baycha · Social Media Downloader.</p>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="tutorial-buttons-wrap">
+          <a href="https://t.me/+ozTHjFdsfi5lMGM1" target="_blank" rel="noopener" class="light-pill-btn">
+            <i class="fa-brands fa-telegram"></i> Telegram Channel
+          </a>
+          <a href="#how-to-use" class="light-pill-btn">
+            <i class="fa-solid fa-graduation-cap"></i> Tutorials
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      
+      <!-- Brand Summary Column -->
+      <div class="footer-brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-badge">
+            <img src="File/BAYCHA.png" alt="BAYCHA Monogram Logo" class="brand-img-logo">
+            <span class="logo-text">BAYCHA</span>
+          </div>
+        </div>
+        <p class="footer-tagline">
+          Best automated software suite to help build earning sources from many monetization & affiliates.
+        </p>
+        <p class="copyright-text">©2026 BAYCHA DEVTEAM</p>
+      </div>
+
+      <!-- Links Column 1: Products -->
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Products</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#hero" onclick="switchProductShowcase('downloader')">BAYCHA Downloader</a></li>
+          <li><a href="#hero" onclick="switchProductShowcase('dubber')">BAYCHA AI Translator & Dubber</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Column 2: Help -->
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Help</h4>
+        <ul class="footer-nav-list">
+          <li><a href="https://t.me/BAYCHATOOLS" target="_blank" rel="noopener">Contact support</a></li>
+          <li><a href="#pricing" onclick="openPricingModal()">Payment instructions</a></li>
+          <li><a href="#sys-req" onclick="openSysReqModal()">License Agreement</a></li>
+        </ul>
+      </div>
+
+      <!-- Links Column 3: Social Media -->
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Social Media</h4>
+        <ul class="footer-nav-list">
+          <li><a href="https://t.me/+ozTHjFdsfi5lMGM1" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram Channel</a></li>
+          <li><a href="https://t.me/BAYCHATOOLS" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram Support</a></li>
+          <li><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://youtube.com" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          <li><a href="https://tiktok.com" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Search Modal Overlay -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-card search-modal-card">
+      <button class="modal-close-btn" onclick="closeSearchModal()"><i class="fa-solid fa-xmark"></i></button>
+      <h3>Search BAYCHA & DEVTEAM</h3>
+      <div class="search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-modal-icon"></i>
+        <input type="text" id="searchInputField" placeholder="Type keywords (e.g. installer, patch, license, video resolution)...">
+      </div>
+      <div class="search-results-list" id="searchResultsContainer">
+        <div class="search-placeholder-msg">Start typing to filter site topics and downloads.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing & License Purchase Modal -->
+  <div class="modal-overlay" id="pricingModal">
+    <div class="modal-card pricing-modal-card">
+      <button class="modal-close-btn" onclick="closePricingModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="pricing-header">
+        <i class="fa-solid fa-shield-halved pricing-badge-icon"></i>
+        <h2>BAYCHA Software License Plans</h2>
+        <p>Instant Activation Key • Bakong KHQR & USDT Supported</p>
+      </div>
+
+      <div class="pricing-cards-grid">
+        
+        <!-- Trial Plan -->
+        <div class="plan-card">
+          <div class="plan-name">Trail License</div>
+          <div class="plan-price">$1 <span>/ 1 Day</span></div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> 1 Day Full Access</li>
+            <li><i class="fa-solid fa-check"></i> Bulk Media Downloader</li>
+            <li><i class="fa-solid fa-check"></i> AI Captions & GPU Accel.</li>
+            <li><i class="fa-solid fa-check"></i> Standard Customer Support</li>
+          </ul>
+          <button class="select-plan-btn" onclick="selectPlan('1-Day Trial', '$1')">Buy Trial ($1)</button>
+        </div>
+
+        <!-- 1 Month Plan -->
+        <div class="plan-card">
+          <div class="plan-name">1 Month</div>
+          <div class="plan-price">$10 <span>/ Month</span></div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> 30 Days License Key</li>
+            <li><i class="fa-solid fa-check"></i> All Platforms & Scrapers</li>
+            <li><i class="fa-solid fa-check"></i> Auto Updates included</li>
+            <li><i class="fa-solid fa-check"></i> Priority Support</li>
+          </ul>
+          <button class="select-plan-btn" onclick="selectPlan('1 Month', '$10')">Buy 1 Month ($10)</button>
+        </div>
+
+        <!-- 3 Months Plan -->
+        <div class="plan-card">
+          <div class="plan-name">3 Months</div>
+          <div class="plan-price">$20 <span>/ 3 Months</span></div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> 90 Days License Key</li>
+            <li><i class="fa-solid fa-check"></i> Save $10 (33% OFF)</li>
+            <li><i class="fa-solid fa-check"></i> Unlimited GPU Threads</li>
+            <li><i class="fa-solid fa-check"></i> Priority 24/7 Support</li>
+          </ul>
+          <button class="select-plan-btn" onclick="selectPlan('3 Months', '$20')">Buy 3 Months ($20)</button>
+        </div>
+
+        <!-- 6 Months Plan (Featured) -->
+        <div class="plan-card popular">
+          <div class="popular-ribbon">BEST VALUE</div>
+          <div class="plan-name">6 Months</div>
+          <div class="plan-price">$33 <span>/ 6 Months</span></div>
+          <div class="bonus-tag"><i class="fa-solid fa-gift"></i> Includes +40 Days Bonus Free!</div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> 220 Days Total License</li>
+            <li><i class="fa-solid fa-check"></i> Best for Power Creators</li>
+            <li><i class="fa-solid fa-check"></i> All Pro Features Included</li>
+            <li><i class="fa-solid fa-check"></i> VIP Direct Telegram Support</li>
+          </ul>
+          <button class="select-plan-btn popular-btn" onclick="selectPlan('6 Months (+40 Days Bonus)', '$33')">Buy 6 Months ($33)</button>
+        </div>
+
+      </div>
+
+      <div class="payment-footer-info">
+        <p><i class="fa-solid fa-qrcode"></i> Bakong KHQR Merchant Integration & USDT Auto Activation</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Machine ID LineEdit Modal -->
+  <div class="modal-overlay" id="machineLicenseModal">
+    <div class="modal-card machine-modal-card">
+      <button class="modal-close-btn" onclick="closeMachineLicenseModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="machine-modal-header">
+        <i class="fa-solid fa-key machine-badge-icon"></i>
+        <h2 id="machineModalPlanTitle">License Key Purchase & Machine Activation</h2>
+        <p id="machineModalPlanPrice">Selected Plan: 1 Month ($10)</p>
+      </div>
+
+      <div class="machine-input-section">
+        <label class="machine-field-label"><i class="fa-solid fa-desktop"></i> YOUR HARDWARE MACHINE ID (Line Edit):</label>
+        <div class="line-edit-group">
+          <input type="text" id="machineIdLineEdit" value="04AA9B823C20DCA6" class="machine-line-edit">
+          <button class="line-edit-btn copy" onclick="copyMachineIdLineEdit()"><i class="fa-solid fa-copy"></i> Copy Machine ID</button>
+        </div>
+        <p class="field-help-text">Paste or modify your Hardware Machine ID above, then click Continue to generate Bakong KHQR.</p>
+      </div>
+
+      <div class="machine-modal-actions">
+        <button class="machine-btn-main green-btn" onclick="proceedToBakongKHQRModal()"><i class="fa-solid fa-qrcode"></i> Continue to Bakong KHQR Payment</button>
+        <button class="machine-btn-main" onclick="sendMachineIdToTelegram()"><i class="fa-brands fa-telegram"></i> Telegram Support</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bakong KHQR Payment QR Code Modal -->
+  <div class="modal-overlay" id="bakongKhqrModal">
+    <div class="modal-card khqr-modal-card">
+      <button class="modal-close-btn" onclick="closeBakongKhqrModal()"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="khqr-header">
+        <div class="khqr-logo-badge">
+          <span class="khqr-red-text">KH</span><span class="khqr-black-text">QR</span>
+        </div>
+        <h2>Bakong KHQR Payment</h2>
+        <p class="khqr-merchant-info">Merchant: <strong>BAYCHA DEVTEAM</strong> • Bakong Token Configured</p>
+      </div>
+
+      <div class="khqr-qr-frame">
+        <div class="qr-canvas-box">
+          <div class="bakong-top-banner">
+            <span class="b-text">BAKONG KHQR</span>
+          </div>
+
+          <div class="qr-code-img-wrap">
+            <svg class="qr-svg-sim" viewBox="0 0 200 200">
+              <!-- Simulated High-Tech Bakong QR Code -->
+              <rect x="0" y="0" width="200" height="200" fill="#ffffff"/>
+              <rect x="10" y="10" width="50" height="50" fill="#cc0000"/>
+              <rect x="20" y="20" width="30" height="30" fill="#ffffff"/>
+              <rect x="25" y="25" width="20" height="20" fill="#cc0000"/>
+              
+              <rect x="140" y="10" width="50" height="50" fill="#cc0000"/>
+              <rect x="150" y="20" width="30" height="30" fill="#ffffff"/>
+              <rect x="155" y="25" width="20" height="20" fill="#cc0000"/>
+
+              <rect x="10" y="140" width="50" height="50" fill="#cc0000"/>
+              <rect x="20" y="150" width="30" height="30" fill="#ffffff"/>
+              <rect x="25" y="155" width="20" height="20" fill="#cc0000"/>
+
+              <!-- Center BC Monogram Logo Overlay -->
+              <circle cx="100" cy="100" r="22" fill="#132b4b"/>
+              <text x="100" y="106" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">BC</text>
+              
+              <!-- Data Pixels -->
+              <rect x="70" y="20" width="12" height="12" fill="#111"/>
+              <rect x="90" y="15" width="12" height="12" fill="#111"/>
+              <rect x="110" y="30" width="12" height="12" fill="#111"/>
+              <rect x="20" y="80" width="12" height="12" fill="#111"/>
+              <rect x="40" y="100" width="12" height="12" fill="#111"/>
+              <rect x="140" y="80" width="12" height="12" fill="#111"/>
+              <rect x="160" y="100" width="12" height="12" fill="#111"/>
+              <rect x="70" y="150" width="12" height="12" fill="#111"/>
+              <rect x="110" y="160" width="12" height="12" fill="#111"/>
+              <rect x="140" y="140" width="12" height="12" fill="#111"/>
+            </svg>
+          </div>
+
+          <div class="khqr-amount-price" id="khqrDisplayPrice">$10.00 USD</div>
+        </div>
+      </div>
+
+      <div class="khqr-status-indicator">
+        <i class="fa-solid fa-spinner fa-spin khqr-spin-icon"></i>
+        <span id="khqrStatusMessage">Scanning Bakong KHQR transaction with token authorization...</span>
+      </div>
+
+      <div class="khqr-action-footer">
+        <button class="khqr-confirm-btn" onclick="confirmBakongPaymentSuccess()"><i class="fa-solid fa-circle-check"></i> Confirm Bakong Payment Success</button>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Download File Modal -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal-card download-modal-card">
+      <button class="modal-close-btn" onclick="closeDownloadModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="download-modal-header">
+        <i class="fa-solid fa-circle-down download-icon-anim"></i>
+        <h2>Downloading BAYCHA Software Installer</h2>
+      </div>
+
+      <div class="download-status-box">
+        <p class="file-name" id="downloadFileName">BAYCHA_Installer_v1.4.07.rar</p>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="downloadProgressFill"></div>
+        </div>
+        <p class="progress-info-text" id="downloadProgressText">Preparing direct download link...</p>
+      </div>
+
+      <div class="rar-notice-card">
+        <div class="notice-icon"><i class="fa-solid fa-key"></i></div>
+        <div class="notice-text">
+          <strong>Extraction RAR Password Required:</strong>
+          <span class="password-code">BAYCHA2026</span>
+          <button class="copy-pass-btn" onclick="copyRarPassword()"><i class="fa-solid fa-copy"></i> Copy Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- System Requirements Modal -->
+  <div class="modal-overlay" id="sysReqModal">
+    <div class="modal-card sysreq-modal-card">
+      <button class="modal-close-btn" onclick="closeSysReqModal()"><i class="fa-solid fa-xmark"></i></button>
+      <h3>BAYCHA System Requirements & Specifications</h3>
+      
+      <table class="specs-table">
+        <tr>
+          <th>Operating System</th>
+          <td>Windows 10 / 11 (64-bit Desktop Application)</td>
+        </tr>
+        <tr>
+          <th>Processor</th>
+          <td>Intel Dual Core 2.0 GHz or AMD equivalent</td>
+        </tr>
+        <tr>
+          <th>Memory (RAM)</th>
+          <td>4 GB RAM minimum (8 GB recommended for batch multi-threading)</td>
+        </tr>
+        <tr>
+          <th>Free Disk Space</th>
+          <td>2 GB free hard disk space</td>
+        </tr>
+        <tr>
+          <th>Graphics (GPU)</th>
+          <td>NVIDIA / AMD GPU with CUDA / OpenCL support for hardware acceleration</td>
+        </tr>
+        <tr>
+          <th>Required Software</th>
+          <td>WinRAR or 7-Zip (Password protected `.rar`: <code>BAYCHA2026</code>)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Video Modal Player -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-card video-modal-card">
+      <button class="modal-close-btn" onclick="closeVideoModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="iframe-container">
+        <video id="localVideoPlayer" controls style="width: 100%; max-height: 480px; border-radius: 8px; display: none;"></video>
+        <iframe id="videoIframe" src="" title="BAYCHA Tutorial Video" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
